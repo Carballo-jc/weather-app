@@ -25,3 +25,5 @@ export const CITIES = [
         name:'Venezuela'
     },
 ]
+
+export const API_KEY = process.env.REACT_APPA_API_HEY

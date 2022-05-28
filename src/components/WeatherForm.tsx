@@ -7,11 +7,11 @@ export const WeatherForm = () => {
       <form>
         <div className="input_group">
           <label htmlFor="ciudad">Ciudad</label>
-          <input type="text" id="ciudad" name="ciudad" />
+          <input type="text" id="country" name="country" />
         </div>
         <div className="input_group">
-          <label htmlFor="pais">País</label>
-          <select id="pais" name="pais">
+          <label htmlFor="city">País</label>
+          <select id="city" name="city">
             <option value=""> Seleccione un país</option>
             {CITIES.map(city =><WeatherOption key={city.id} {...city}/>)}
           </select>
