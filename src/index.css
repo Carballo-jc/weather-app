@@ -1,20 +1,25 @@
 html{
   padding: 0;
   margin: 0;
-  max-width: 1280px;
-}
-
-body {
-  font-family: sans-serif;
-  background-image: url('../public/image_body.jpg');
+  background-image: url('../public/assets/image_body.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+body {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 1280px;
+  min-height: 768px;
+}
+main {
+  margin: 1rem auto;
+}
 header {
   background-color: #0ea5e975;
   padding: 1rem;
   border-bottom: .5rem solid #0284c7;
+  width: 100%;
 }
 header h1 {
   text-align: center;
@@ -33,9 +38,7 @@ header h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-main {
-  margin: 1rem auto;
-}
+
 .container {
   margin: auto;
   border-radius: .5rem;
@@ -68,20 +71,26 @@ main {
   justify-content: space-between;
 }
 .cards{
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   margin: 1rem auto;
   width: 90%;
-  max-width: 1280px;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  justify-content: space-between;
 }
 .card{
   width: 200px;
   height: 150px;
   padding: 10px;
-  margin-right: 10px;
-  margin-bottom: 8px;
+  margin: 10px;
+  margin-bottom: 10px;
   background-color: #ffffff61;
   border-radius: 1rem;
+}
+@media (max-width: 700px) {
+  .card{
+    width: 42%;
+    
+  }
 }
 .card_item{
   width: 90%;
@@ -104,13 +113,7 @@ form {
   margin: 0 auto 1rem auto;
 }
 
-.input_group input {
-  all: unset;
-  border: 1px solid #cbd5e1;
-  width: 65%;
-  border-radius: 1rem;
-  padding: .5rem;
-}
+
 .input_group select{
   all: unset;
   border: 1px solid #cbd5e1;
@@ -135,7 +138,7 @@ form {
   transition: background-color .3s ease;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .btn_submit {
      max-width: 300px;
   }
