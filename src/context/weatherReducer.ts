@@ -1,15 +1,26 @@
-import { CityState } from "./WeatherProvider";
+import { WeatherCityResponse } from "../interfaces/weatherCity";
+import { WeatherDays } from "../interfaces/weatherDay";
+import { WeatherState } from "./WeatherProvider";
 
-type WeatherAction = {type: 'setSearchCity', payload: { city: string, country:string}}
-export const weatherReducer = (state: CityState , action: WeatherAction): CityState => {
+type WeatherAction = {type: 'searchWeather', payload: WeatherCityResponse} |
+{type: 'seachWeatherDays', payload: WeatherDays};
+export const weatherReducer = (state: WeatherState , action: WeatherAction): WeatherState => {
 
 
 switch (action.type) {
-    case 'setSearchCity':
+    case 'searchWeather':
         return {
             ...state,
-            ...action.payload,
-        }
+            loading: true,
+            dataWeather:action.payload
+            
+        };
+        case 'seachWeatherDays':
+            return {
+                ...state,
+                loading: true,
+                dataDay: action.payload
+            }
 
     default:
         return state;

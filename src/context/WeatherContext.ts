@@ -1,9 +1,16 @@
 import { createContext } from "react";
+import { WeatherCityResponse } from "../interfaces/weatherCity";
+import { WeatherDays } from "../interfaces/weatherDay";
 
 
 export interface WeatherContextProps {
-    city: string;
-    country: string;
+    loading: boolean;
+    dataWeather: WeatherCityResponse;
+    dataDay: WeatherDays;
+    search: any;
+    handleCityChange: any;
+    getWeatherCity: any;
+
 }
 
 export const WeatherContext = createContext<WeatherContextProps>({} as WeatherContextProps);
