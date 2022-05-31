@@ -6,30 +6,24 @@ import { WeatherOption } from "./WeatherOption";
 
 export const WeatherForm = () => {
   const {search, handleCityChange, getWeatherCity } = useContext(WeatherContext);
-
- 
   return (
     <div className="container">
       <form 
       onSubmit={getWeatherCity}
       >
+       <div className="container_items">
+         {/* {alerta && <p>{alerta}</p>} */}
         <div className="input_group">
-          <label htmlFor="city" className="container_item_subtitle">Ciudad</label>
-          <input type="text" id="city" name="city"
+          <label htmlFor="country" className="container_item_subtitle">Ciudad</label>
+          <select id="country" name="city"
           value={search.city}
           onChange={handleCityChange}
-          />
-        </div>
-        <div className="input_group">
-          <label htmlFor="country" className="container_item_subtitle">País</label>
-          <select id="country" name="country"
-          value={search.country}
-          onChange={handleCityChange}
           >
-            <option value=""> Seleccione un país</option>
+            <option value=""> Seleccione </option>
             {CITIES.map(city =><WeatherOption key={city.id} {...city}/>)}
           </select>
         </div>
+       </div>
         <button type="submit" className="btn_submit">Consultar</button>
       </form>
     </div>

@@ -25,7 +25,6 @@ const WeatherProvider = ({children}: Props) =>{
     const [state, dispatch] = useReducer(weatherReducer, initialState)
   const [search, setSearch ] = useState({
     city: '',
-    country:'',
   });
   const handleCityChange = (e: any) => {
     setSearch({

@@ -1,15 +1,20 @@
+html{
+  padding: 0;
+  margin: 0;
+  max-width: 1280px;
+}
+
 body {
   font-family: sans-serif;
-  /* background-color: #0b78cfb5; */
   background-image: url('../public/image_body.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  font-size: 1.5rem;
 }
+
 header {
-  background-color: #0ea5e9;
+  background-color: #0ea5e975;
   padding: 1rem;
-  border-bottom: 1rem solid #0284c7;
+  border-bottom: .5rem solid #0284c7;
 }
 header h1 {
   text-align: center;
@@ -29,35 +34,51 @@ header h1 {
   }
 }
 main {
-  margin: 3rem auto;
-  max-width: 1200px;
+  margin: 1rem auto;
 }
 .container {
-  margin: 0 auto 1rem auto;
+  margin: auto;
   border-radius: .5rem;
   background-color: #ffffff36;
-  padding: 2rem;
-  width: 90%;
-  height: 300px;
+  padding: 1rem;
+  width: 80%;
+  height: 170px;
+}
+.container_items{
+  display: flex;
 }
 .container_item_subtitle{
-  font-size: 25px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.container_header_title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.container_header_card{
+  display: flex;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
 }
 .temp_min_max{
   display: flex;
   width: 80%;
+  margin: auto;
   justify-content: space-between;
 }
 .cards{
   display: grid;
+  margin: 1rem auto;
   width: 90%;
-  margin: auto;
+  max-width: 1280px;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }
 .card{
   width: 200px;
-  height: 200px;
-  padding: 15px;
+  height: 150px;
+  padding: 10px;
+  margin-right: 10px;
   margin-bottom: 8px;
   background-color: #ffffff61;
   border-radius: 1rem;
@@ -66,6 +87,10 @@ main {
   width: 90%;
   margin: auto;
   font-size: 16px;
+}
+.card_item_text{
+  font-size: 14px;
+  max-width: 0;
 }
 .span_item{
   font-size: 16px;
@@ -78,23 +103,28 @@ form {
   max-width: 400px;
   margin: 0 auto 1rem auto;
 }
-.input_group label {
-  display: block;
 
-}
-.input_group input,
-.input_group select {
+.input_group input {
   all: unset;
   border: 1px solid #cbd5e1;
-  width: 80%;
+  width: 65%;
+  border-radius: 1rem;
+  padding: .5rem;
+}
+.input_group select{
+  all: unset;
+  border: 1px solid #cbd5e1;
+  width: 100%;
+  font-size: 20px;
   border-radius: 1rem;
   padding: .5rem;
 }
 
+
  .btn_submit {
   background-color: #0ea5e9;
   border-radius: 4px;
-  margin: 2rem auto 0 auto;
+  margin: auto;
   display: block;
   padding: 1rem;
   color: white;
@@ -106,16 +136,10 @@ form {
   cursor: pointer;
 }
 @media (min-width: 768px) {
-   button[type="submit"]  {
+  .btn_submit {
      max-width: 300px;
   }
 }
 .btn_submit:hover {
   background-color: #0369a1;
-}
-.loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
