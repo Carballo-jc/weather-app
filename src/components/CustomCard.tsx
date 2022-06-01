@@ -1,4 +1,4 @@
-import { kelvin, urlImage, WEEK_DAYS } from "../utils";
+import { kelvin, urlImage } from "../utils";
 
 export const CustomCard = (props: any) => {
   const icon = `${urlImage}${props.weather[0]?.icon}.png`;
@@ -6,7 +6,7 @@ export const CustomCard = (props: any) => {
     <div className="card">
       <div className="container_header_card">
         <span className="container_item_subtitle">
-          {WEEK_DAYS[props.index]}
+          {props.dayWeek[props.index]}
         </span>
         <img src={icon} alt="icon" width="70px" height="70px" />
       </div>
