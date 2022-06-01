@@ -9,3 +9,7 @@
 
 ## [Pantalla principal](/public/assets/dasboard.jpeg)
 ## [Pantalla de opciones de la ciudad](/public/assets/option_cities.jpeg)
+
+# NOTA:
+## Se creo un nuevo branch ``feature-mejora-de-vista`` para corregir y mostrar de manera correcta los dias de la semana.
+## Se agrego información al momento de inicar la aplicacion para mejorar la experiencia al usuario:
