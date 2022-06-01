@@ -9,8 +9,6 @@ export interface WeatherContextProps {
     dataDay: WeatherDays;
     search: any;
     handleCityChange: any;
-    getWeatherCity: any;
-
 }
 
 export const WeatherContext = createContext<WeatherContextProps>({} as WeatherContextProps);

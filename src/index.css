@@ -15,6 +15,9 @@ body {
 main {
   margin: 1rem auto;
 }
+p{
+  margin: 8px 5px;
+}
 header {
   background-color: #0ea5e975;
   padding: 1rem;
@@ -51,11 +54,12 @@ header h1 {
   display: flex;
 }
 .container_item_subtitle{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
+  margin: 0;
 }
 .container_header_title{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 .container_header_card{
@@ -112,14 +116,12 @@ form {
   max-width: 400px;
   margin: 0 auto 1rem auto;
 }
-
-
 .input_group select{
-  all: unset;
   border: 1px solid #cbd5e1;
-  width: 100%;
-  font-size: 20px;
-  border-radius: 1rem;
+  background-color: #dfeef5;
+  width: 90%;
+  font-size: 18px;
+  border-radius: .5rem;
   padding: .5rem;
 }
 
